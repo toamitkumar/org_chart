@@ -1,0 +1,20 @@
+/*Context Menu*/
+.hsiSprite{background-image:url(../images/orgSprite.png); *background-image:url(../images/orgSprite.gif); background-repeat:no-repeat; display:inline-block;}
+.hsiOrgChTT, .subBox{z-index: 1000; position:absolute;border:1px solid; border-radius:0.4em; padding:0px; -moz-border-radisu:0.4em; background-color:#eee;   -moz-box-shadow: 5px 5px 5px #ccc; -webkit-box-shadow: 5px 5px 5px #ccc;box-shadow: 5px 5px 5px #ccc;}
+.hsiOrgChTT div.enabled{ vertical-align:top; font-size:12px; cursor:pointer;background-color: #EEEEEE; height:20px; width:117px}
+.hsiOrgChTT div.disabled{ vertical-align:top; font-size:12px;background-color: #EEEEEE; height:20px; width:117px}
+.hsiOrgChTT .noBotBorder{ border-bottom:0px;background-color: #999999;}
+.hsiOrgChTT div.enabled:hover .subOrgChTxt{ text-decoration:underline}
+.hsiOrgChTT div.disabled .subOrgChTxt{color: #939393;}
+.hsiOrgChTT div.enabled .txt{ padding-bottom:3px}
+.subBox{width:auto; padding:10px; left:126px; margin-top:-26px}
+.editIco{ background-position:-192px -559px; width:37px; height:25px; float:left}
+.redFlIco{ background-position:-192px -589px;  width:37px; height:27px; float:left }
+.suitcaseIco{ background-position:-192px -623px;  width:37px; height:28px; float:left}
+.smPieIco{ background-position:-238px -491px;  width:37px; height:28px; float:left}
+.lightBlbIco{ background-position:-238px -528px;  width:37px; height:31px; float:left}
+.orgChIco{ background-position:-232px -558px;  width:37px; height:26px; float:left}
+.binocularsIco{ background-position:-229px -593px;  width:37px; height:22px; float:left}
+.redCrosIco{cursor: pointer;background-position:-235px -626px; height:17px; width:18px; display:inline-block;}
+.redCloseCont{border-bottom: 1px solid; text-align:right; padding:5px; background-color:#999; border-radius:0.4em 0.4em 0 0;background-color: #85C3DD;}
+.editCont, .redFlCont, .suitcaseCont, .smPieCont, .lightBlbCont, .orgChCont, .binocularsCont{ padding:5px; border-bottom:1px solid;}
