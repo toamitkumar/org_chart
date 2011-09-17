@@ -188,7 +188,7 @@ function initTreeView(json, canvas_height) {
                 }
                 var w = width;
                 drawRect(ctx, x, y, w, h, r);
-                ctx.fillStyle = ('#191985')
+                ctx.fillStyle = ('#516395')
                 ctx.fill();
                 if (!data.is_informative) {
                     //put a white space inside the node to create a feeling of two nodes
@@ -222,7 +222,7 @@ function initTreeView(json, canvas_height) {
                     ctx3.font = "normal 11px Arial";
                     ctx3.fillStyle = "#000";
                     ctx3.fillText("Savings:", x, y + 22);
-                    ctx3.fillStyle = "#12A2E9";
+                    ctx3.fillStyle = "#516395";
                     ctx3.font = "normal 11px Arial";
                     ctx3.fillText(" " + savings, x + 43, y + 22);
                 }
