@@ -12,8 +12,403 @@
 
 <script type="text/javascript">
   jQuery(document).ready(function(){
-    var canvas_height = 500;
-    var JSON = {"id": "node0","name": "Parent","data": {"has_children":true,"level":0,"stats": "100","savings":"34881.0"},"children": [{"id": "node1","name": "Child 1","data": {"has_children":true,"level":1,"stats": "2","savings":"573.6"},"children": []},{"id": "node2","name": "Child 2","data": {"has_children":true,"level":1,"stats": "3","savings":"1077.3"},"children": []},{"id": "node3","name": "Child 3","data": {"has_children":true,"level":1,"stats": "8","savings":"2785.9"},"children": []},{"id": "node4","name": "Child 4","data": {"has_children":true,"level":1,"stats": "12","savings":"4045.8"},"children": []},{"id": "node5","name": "Child 5","data": {"has_children":true,"level":1,"stats": "7","savings":"2370.0"},"children": []},{"id": "node6","name": "Child 6","data": {"has_children":true,"level":1,"stats": "12","savings":"4107.4"},"children": []}]};
+    var canvas_height = 900;
+    var JSON = {
+    "id": "node0",
+    "name": "Fresh Poultry",
+    "data": {
+        "has_children": true,
+        "level": 0,
+        "stats": "100",
+        "savings": "34881.0"
+    },
+    "children": [
+        {
+            "id": "node1",
+            "name": "Chicken",
+            "data": {
+                "has_children": true,
+                "level": 1,
+                "stats": "2",
+                "savings": "573.6"
+            },
+            "children": [
+            	{
+            	    "id": "node11",
+            	    "name": "Regular/free range",
+            	    "data": {
+            	        "has_children": true,
+            	        "level": 2,
+            	        "stats": "3",
+            	        "savings": "1077.3"
+            	    },
+            	    "children": [
+            	    	{
+            	    	    "id": "node21",
+            	    	    "name": "Mixed portions",
+            	    	    "data": {
+            	    	        "has_children": true,
+            	    	        "level": 3,
+            	    	        "stats": "3",
+            	    	        "savings": "1077.3"
+            	    	    },
+            	    	    "children": [
+            	    	    	{
+            	    	    	    "id": "node211",
+            	    	    	    "name": "Braai pack",
+            	    	    	    "data": {
+            	    	    	        "has_children": true,
+            	    	    	        "level": 4,
+            	    	    	        "stats": "3",
+            	    	    	        "savings": "1077.3"
+            	    	    	    },
+            	    	    	    "children": [
+            	    	    	    	{
+            	    	    	    	    "id": "node2111",
+            	    	    	    	    "name": "6 or less pcs",
+            	    	    	    	    "data": {
+            	    	    	    	        "has_children": false,
+            	    	    	    	        "level": 5,
+            	    	    	    	        "stats": "3",
+            	    	    	    	        "savings": "1077.3"
+            	    	    	    	    },
+            	    	    	    	    "children": []
+            	    	    	    	},
+            	    	    	    	{
+            	    	    	    	    "id": "node2112",
+            	    	    	    	    "name": "> 6 pcs",
+            	    	    	    	    "data": {
+            	    	    	    	        "has_children": false,
+            	    	    	    	        "level": 5,
+            	    	    	    	        "stats": "3",
+            	    	    	    	        "savings": "1077.3"
+            	    	    	    	    },
+            	    	    	    	    "children": []
+            	    	    	    	}
+            	    	    	    ]
+            	    	    	}
+            	    	    ]
+            	    	},
+            	    	{
+            	    	    "id": "node22",
+            	    	    "name": "Whole bird",
+            	    	    "data": {
+            	    	        "has_children": false,
+            	    	        "level": 3,
+            	    	        "stats": "3",
+            	    	        "savings": "1077.3"
+            	    	    },
+            	    	    "children": []
+            	    	},
+            	    	{
+            	    	    "id": "node23",
+            	    	    "name": "Single portions",
+            	    	    "data": {
+            	    	        "has_children": true,
+            	    	        "level": 3,
+            	    	        "stats": "3",
+            	    	        "savings": "1077.3"
+            	    	    },
+            	    	    "children": [
+            	    	    	{
+            	    	    	    "id": "node231",
+            	    	    	    "name": "Thighs",
+            	    	    	    "data": {
+            	    	    	        "has_children": false,
+            	    	    	        "level": 4,
+            	    	    	        "stats": "3",
+            	    	    	        "savings": "1077.3"
+            	    	    	    },
+            	    	    	    "children": [
+            	    	    	    	{
+            	    	    	    	    "id": "node2311",
+            	    	    	    	    "name": "6 or less pcs",
+            	    	    	    	    "data": {
+            	    	    	    	        "has_children": false,
+            	    	    	    	        "level": 5,
+            	    	    	    	        "stats": "3",
+            	    	    	    	        "savings": "1077.3"
+            	    	    	    	    },
+            	    	    	    	    "children": []
+            	    	    	    	},
+            	    	    	    	{
+            	    	    	    	    "id": "node2312",
+            	    	    	    	    "name": "> 6 pcs",
+            	    	    	    	    "data": {
+            	    	    	    	        "has_children": false,
+            	    	    	    	        "level": 5,
+            	    	    	    	        "stats": "3",
+            	    	    	    	        "savings": "1077.3"
+            	    	    	    	    },
+            	    	    	    	    "children": []
+            	    	    	    	}
+            	    	    	    ]
+            	    	    	},
+            	    	    	{
+            	    	    	    "id": "node232",
+            	    	    	    "name": "Breasts",
+            	    	    	    "data": {
+            	    	    	        "has_children": false,
+            	    	    	        "level": 4,
+            	    	    	        "stats": "3",
+            	    	    	        "savings": "1077.3"
+            	    	    	    },
+            	    	    	    "children": [
+            	    	    	    	{
+            	    	    	    	    "id": "node2321",
+            	    	    	    	    "name": "4 or less pcs",
+            	    	    	    	    "data": {
+            	    	    	    	        "has_children": false,
+            	    	    	    	        "level": 5,
+            	    	    	    	        "stats": "3",
+            	    	    	    	        "savings": "1077.3"
+            	    	    	    	    },
+            	    	    	    	    "children": []
+            	    	    	    	},
+            	    	    	    	{
+            	    	    	    	    "id": "node2322",
+            	    	    	    	    "name": "> 4 pcs",
+            	    	    	    	    "data": {
+            	    	    	    	        "has_children": false,
+            	    	    	    	        "level": 5,
+            	    	    	    	        "stats": "3",
+            	    	    	    	        "savings": "1077.3"
+            	    	    	    	    },
+            	    	    	    	    "children": []
+            	    	    	    	}
+            	    	    	    ]
+            	    	    	},
+            	    	    	{
+            	    	    	    "id": "node233",
+            	    	    	    "name": "Drums/legs",
+            	    	    	    "data": {
+            	    	    	        "has_children": false,
+            	    	    	        "level": 4,
+            	    	    	        "stats": "3",
+            	    	    	        "savings": "1077.3"
+            	    	    	    },
+            	    	    	    "children": [
+            	    	    	    	{
+            	    	    	    	    "id": "node2331",
+            	    	    	    	    "name": "5 or less pcs",
+            	    	    	    	    "data": {
+            	    	    	    	        "has_children": false,
+            	    	    	    	        "level": 5,
+            	    	    	    	        "stats": "3",
+            	    	    	    	        "savings": "1077.3"
+            	    	    	    	    },
+            	    	    	    	    "children": []
+            	    	    	    	},
+            	    	    	    	{
+            	    	    	    	    "id": "node2332",
+            	    	    	    	    "name": "> 5 pcs",
+            	    	    	    	    "data": {
+            	    	    	    	        "has_children": false,
+            	    	    	    	        "level": 5,
+            	    	    	    	        "stats": "3",
+            	    	    	    	        "savings": "1077.3"
+            	    	    	    	    },
+            	    	    	    	    "children": []
+            	    	    	    	}
+            	    	    	    ]
+            	    	    	},
+            	    	    	{
+            	    	    	    "id": "node234",
+            	    	    	    "name": "Wings",
+            	    	    	    "data": {
+            	    	    	        "has_children": false,
+            	    	    	        "level": 4,
+            	    	    	        "stats": "3",
+            	    	    	        "savings": "1077.3"
+            	    	    	    },
+            	    	    	    "children": [
+            	    	    	    	{
+            	    	    	    	    "id": "node2341",
+            	    	    	    	    "name": "6 or less pcs",
+            	    	    	    	    "data": {
+            	    	    	    	        "has_children": false,
+            	    	    	    	        "level": 5,
+            	    	    	    	        "stats": "3",
+            	    	    	    	        "savings": "1077.3"
+            	    	    	    	    },
+            	    	    	    	    "children": []
+            	    	    	    	},
+            	    	    	    	{
+            	    	    	    	    "id": "node2342",
+            	    	    	    	    "name": "> 6 pcs",
+            	    	    	    	    "data": {
+            	    	    	    	        "has_children": false,
+            	    	    	    	        "level": 5,
+            	    	    	    	        "stats": "3",
+            	    	    	    	        "savings": "1077.3"
+            	    	    	    	    },
+            	    	    	    	    "children": []
+            	    	    	    	}
+            	    	    	    ]
+            	    	    	},
+            	    	    	{
+            	    	    	    "id": "node235",
+            	    	    	    "name": "Other",
+            	    	    	    "data": {
+            	    	    	        "has_children": false,
+            	    	    	        "level": 4,
+            	    	    	        "stats": "3",
+            	    	    	        "savings": "1077.3"
+            	    	    	    },
+            	    	    	    "children": []
+            	    	    	}
+            	    	    ]
+            	    	},
+            	    	{
+            	    	    "id": "node24",
+            	    	    "name": "By-products",
+            	    	    "data": {
+            	    	        "has_children": true,
+            	    	        "level": 3,
+            	    	        "stats": "3",
+            	    	        "savings": "1077.3"
+            	    	    },
+            	    	    "children": [
+            	    	    	{
+            	    	    	    "id": "node241",
+            	    	    	    "name": "Livers",
+            	    	    	    "data": {
+            	    	    	        "has_children": false,
+            	    	    	        "level": 4,
+            	    	    	        "stats": "3",
+            	    	    	        "savings": "1077.3"
+            	    	    	    },
+            	    	    	    "children": []
+            	    	    	},
+            	    	    	{
+            	    	    	    "id": "node242",
+            	    	    	    "name": "Hearts",
+            	    	    	    "data": {
+            	    	    	        "has_children": false,
+            	    	    	        "level": 4,
+            	    	    	        "stats": "3",
+            	    	    	        "savings": "1077.3"
+            	    	    	    },
+            	    	    	    "children": []
+            	    	    	},
+            	    	    	{
+            	    	    	    "id": "node243",
+            	    	    	    "name": "Necks",
+            	    	    	    "data": {
+            	    	    	        "has_children": false,
+            	    	    	        "level": 4,
+            	    	    	        "stats": "3",
+            	    	    	        "savings": "1077.3"
+            	    	    	    },
+            	    	    	    "children": []
+            	    	    	},
+            	    	    	{
+            	    	    	    "id": "node244",
+            	    	    	    "name": "Gizzards",
+            	    	    	    "data": {
+            	    	    	        "has_children": false,
+            	    	    	        "level": 4,
+            	    	    	        "stats": "3",
+            	    	    	        "savings": "1077.3"
+            	    	    	    },
+            	    	    	    "children": []
+            	    	    	},
+            	    	    	{
+            	    	    	    "id": "node245",
+            	    	    	    "name": "Heads & Feet",
+            	    	    	    "data": {
+            	    	    	        "has_children": false,
+            	    	    	        "level": 4,
+            	    	    	        "stats": "3",
+            	    	    	        "savings": "1077.3"
+            	    	    	    },
+            	    	    	    "children": []
+            	    	    	},
+            	    	    	{
+            	    	    	    "id": "node255",
+            	    	    	    "name": "Giblets",
+            	    	    	    "data": {
+            	    	    	        "has_children": false,
+            	    	    	        "level": 4,
+            	    	    	        "stats": "3",
+            	    	    	        "savings": "1077.3"
+            	    	    	    },
+            	    	    	    "children": []
+            	    	    	},
+            	    	    	{
+            	    	    	    "id": "node265",
+            	    	    	    "name": "Other",
+            	    	    	    "data": {
+            	    	    	        "has_children": false,
+            	    	    	        "level": 4,
+            	    	    	        "stats": "3",
+            	    	    	        "savings": "1077.3"
+            	    	    	    },
+            	    	    	    "children": []
+            	    	    	}
+            	    	    ]
+            	    	},
+            	    	{
+            	    	    "id": "node25",
+            	    	    "name": "Value add",
+            	    	    "data": {
+            	    	        "has_children": false,
+            	    	        "level": 3,
+            	    	        "stats": "3",
+            	    	        "savings": "1077.3"
+            	    	    },
+            	    	    "children": []
+            	    	}
+            	    ]
+            	},
+            	{
+            	    "id": "node12",
+            	    "name": "Halaal",
+            	    "data": {
+            	        "has_children": false,
+            	        "level": 2,
+            	        "stats": "3",
+            	        "savings": "1077.3"
+            	    },
+            	    "children": []
+            	},
+            	{
+            	    "id": "node13",
+            	    "name": "Kosher",
+            	    "data": {
+            	        "has_children": false,
+            	        "level": 2,
+            	        "stats": "3",
+            	        "savings": "1077.3"
+            	    },
+            	    "children": []
+            	}
+            ]
+        },
+        {
+            "id": "node2",
+            "name": "Duck",
+            "data": {
+                "has_children": false,
+                "level": 1,
+                "stats": "3",
+                "savings": "1077.3"
+            },
+            "children": []
+        },
+        {
+            "id": "node3",
+            "name": "Turkey",
+            "data": {
+                "has_children": false,
+                "level": 1,
+                "stats": "8",
+                "savings": "2785.9"
+            },
+            "children": []
+        }
+    ]
+};
     initTreeView(JSON, canvas_height);
   });
 </script>

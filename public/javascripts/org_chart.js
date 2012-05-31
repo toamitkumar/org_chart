@@ -30,11 +30,21 @@ var Log = {
     }
 };
 
-function drillDownMenu(node, eventInfo, e) {
-    var drillDownUrl = $("#infovis").attr("data-tree-url");
-    var analyticsURL = $("#infovis").attr("data-analytics-url");
-    var metricURL = $("#infovis").attr("data-base-url") + '/metric/';
+function navigateToPage(node, eventInfo, e) {
+  if (typeof(node.id) == 'undefined') {
+      return false;
+  }
 
+  $(".hsiOrgChTT").remove();
+
+  var y = e.pageY;
+  var tt = '<div class="hsiOrgChTT" style="left:' + getPosX(e) + 'px; top:' + getPosY(e) + 'px">';
+  tt += '<div class="enabled"><div class="hsiSprite"></div><div class="subOrgChTxt">Navigate</div><div class="hsiClear"></div></div>';
+  tt += '</div>';
+  $("body").append(tt);
+}
+
+function drillDownMenu(node, eventInfo, e) {
     if (typeof(node.id) == 'undefined') {
         return false;
     }
@@ -109,15 +119,16 @@ function initTreeView(json, canvas_height) {
         injectInto: 'infovis',
         width: 980,
         height: canvas_height,
-        offsetX: 155,
+        offsetX: 365,
+        // offsetY: -50,
         duration: 300,
         levelDistance: 50,
-        constrained: true,
-        levelsToShow: 1,
+        constrained: false,
+        levelsToShow: 5,
         Node: {
             overridable: true,
-            height: 70,
-            width: 210,
+            height: 30,
+            width: 110,
             type: 'roundrect',
             color: '#516395'
         },
@@ -155,7 +166,7 @@ function initTreeView(json, canvas_height) {
         },
         Events: {
             enable: true,
-            onClick: drillDownMenu
+            onClick: function() {window.location.href = "static.html"}
         }
     });
 
@@ -192,7 +203,7 @@ function initTreeView(json, canvas_height) {
                 ctx.fill();
                 if (!data.is_informative) {
                     //put a white space inside the node to create a feeling of two nodes
-                    var ctx2 = canvas.getCtx();
+                    /*var ctx2 = canvas.getCtx();
                     ort = this.config.orientation;
                     ctx2.beginPath();
                     r = 0;
@@ -224,7 +235,7 @@ function initTreeView(json, canvas_height) {
                     ctx3.fillText("Savings:", x, y + 22);
                     ctx3.fillStyle = "#516395";
                     ctx3.font = "normal 11px Arial";
-                    ctx3.fillText(" " + savings, x + 43, y + 22);
+                    ctx3.fillText(" " + savings, x + 43, y + 22); */
                 }
             }
         }
