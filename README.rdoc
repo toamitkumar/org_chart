@@ -9,13 +9,15 @@ The extension builds inverted organization chart. All JSONey.
 
 ![Organization Chart with Context Menu](http://3.bp.blogspot.com/--nZN6XEAV2g/TnQiphNYGVI/AAAAAAAAEUk/--YFeDW9gB0/s1600/org_chart_menu.png)
 
-Look at the examples directory for details.
+Look at the public directory for details.
+
+![Url to the application](http://organization-chart.heroku.com/)
 
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2010-2011 Amit Kumar <toamitkumar@gmail.com>
+Copyright (c) 2010-2012 Amit Kumar <toamitkumar@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
