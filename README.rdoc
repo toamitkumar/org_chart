@@ -11,7 +11,7 @@ The extension builds inverted organization chart. All JSONey.
 
 Look at the public directory for details.
 
-![Url to the application](http://organization-chart.heroku.com/)
+[Url to the application](http://organization-chart.heroku.com/)
 
 == LICENSE:
 
