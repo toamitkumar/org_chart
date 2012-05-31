@@ -1,5 +1,7 @@
 Creating Organization Charts using [Space Tree - JIT Libraray](http://thejit.org/static/v20/Jit/Examples/Spacetree/example1.code.html) JS library.
 
+[Url to the application](http://organization-chart.heroku.com/)
+
 The extension builds inverted organization chart. All JSONey.
 
 ![Organization Chart](http://3.bp.blogspot.com/-7sJnpZ8oLuk/TnQinEEzY6I/AAAAAAAAEUg/EXK8uIv7qr0/s1600/org_chart.png)
@@ -11,7 +13,6 @@ The extension builds inverted organization chart. All JSONey.
 
 Look at the public directory for details.
 
-[Url to the application](http://organization-chart.heroku.com/)
 
 == LICENSE:
 
